@@ -1,0 +1,43 @@
+<div class="border border-gray-300 rounded-lg p-4 w-full h-full bg-white shadow flex flex-col">
+    <div class="flex">
+        <img src="https://eu.ui-avatars.com/api/?name={{ .name }}" class="rounded-xl" alt="card-illustration"/>
+        <div class="pl-4 w-full">
+                <span class="font-bold flex w-full">
+                    {{ .name }}
+                    <span class="font-thin text-sm ml-auto text-gray-500">
+                        {{ .version }}
+                    </span>
+                </span>
+            <span class="font-light block">{{ .author }}</span>
+        </div>
+    </div>
+    <div class="pt-4 text-blue-700 md:flex font-bold">
+        <div class="text-gray-700 font-light pr-2">
+            {{ .description }}
+        </div>
+        <div class="ml-auto pt-4 md:pt-0">
+            <button
+                data-module='{"version":"{{ .version }}","name":"{{ .name }}","repository":"{{ .repository }}"}'
+                type="button"
+                class="whitespace-no-wrap border border-gray-200 bg-gray-200 text-gray-700 rounded-md px-4 py-2 transition duration-500 ease select-none hover:bg-gray-300 focus:outline-none focus:shadow-outline"
+            >
+                Add this module
+            </button>
+        </div>
+    </div>
+    <div class="overflow-x-scroll pt-4 mt-auto">
+        <div class="pt-4 flex inline-flex border-gray-200 border-t">
+            {{ range .tags }}
+                <div class="pr-2">
+                    {{ block "tag" . }}{{ end }}
+                </div>
+            {{ end }}
+        </div>
+    </div>
+</div>
+
+{{ define "tag" }}
+    <div class="text-xs whitespace-no-wrap flex px-3 py-1 bg-blue-200 text-blue-700 rounded-full">
+        {{ . }}
+    </div>
+{{ end }}

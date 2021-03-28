@@ -1,0 +1,28 @@
+# SETUP
+baseurl = "/"
+publishdir = "public"
+DefaultContentLanguage = "en"
+canonifyUrls = "true"
+googleAnalytics = ""
+disableKinds = ["RSS","taxonomy","taxonomyTerm"] #remove this if needed
+summaryLength = 40
+
+[outputs]
+    home = ["HTML","RSS"]
+    section  = ["HTML"]
+
+[outputFormats]
+    [outputFormats.RSS]
+        mediatype = "application/rss"
+        baseName = "feed"
+
+# for RSS feed
+[author]
+    name = "darkweak"
+    email = "sylvaincombraque@hotmail.fr"
+
+[params]
+    title = "xCaddy builder"
+    description = "It helps to choose modules by searching, select the interested ones and propose you to download directly the binary for the architecture or giving you the related command"
+    showReadTime = 1
+    images = ["https://avatars.githubusercontent.com/u/25440709?v=4"]

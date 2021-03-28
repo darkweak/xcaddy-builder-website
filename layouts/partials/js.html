@@ -1,0 +1,55 @@
+<script>
+  const baseCommand = 'xcaddy build';
+  document.getElementById('command').innerText = baseCommand;
+  let selectedModules = [];
+  let modulesList = [].slice.call(document.getElementById('modules-list-section').children);
+  const moduleSearch = document.getElementById('modules-search');
+  const dataModules = document.querySelectorAll('[data-module]');
+
+  function copy() {
+    navigator.clipboard.writeText(`${baseCommand}${selectedModules.map(s => ` --with ${s.repository}`).join('')}`)
+  }
+
+  moduleSearch.addEventListener('keyup', function (e) {
+    const v = e.target.value.toLowerCase();
+    modulesList.forEach(child => {
+      if (child.textContent.toLowerCase().includes(v)) {
+        child.classList.remove('hidden');
+      } else {
+        child.classList.add('hidden');
+      }
+    })
+  })
+
+  function equalModule(module1, module2) {
+    const { name: nM1, repository: rM1, version: vM1 } = module1;
+    const { name: nM2, repository: rM2, version: vM2 } = module2;
+    return nM1 === nM2 && rM1 === rM2 && vM1 === vM2;
+  }
+
+  dataModules.forEach(module => {
+    module.addEventListener('click', function () {
+      const currentModule = JSON.parse(module.dataset.module);
+      const index = selectedModules.findIndex(s => equalModule(s, currentModule))
+      if (index !== -1) {
+        selectedModules.splice(index, 1);
+        module.innerText = 'Add this module';
+      } else {
+        selectedModules.push(currentModule);
+        module.innerText = 'Remove this module';
+      }
+      const resume = document.getElementById('resume-list');
+      resume.innerHTML = '';
+      selectedModules.map(m => {
+        const wrapper = document.createElement('div');
+        wrapper.classList.add('py-4')
+        wrapper.innerHTML = `<div class="border-t border-gray-200 w-full pt-4">
+            <span class="block font-bold">${ m.name }</span>
+            <span class="block text-sm font-thin">${ m.version }</span>
+          </div>`;
+        resume.appendChild(wrapper);
+      })
+      document.getElementById('command').innerText = `${baseCommand}${selectedModules.map(s => ` --with ${s.repository}`).join('')}`;
+    })
+  })
+</script>

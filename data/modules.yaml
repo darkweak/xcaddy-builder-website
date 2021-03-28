@@ -1,0 +1,160 @@
+modules:
+  - author: Darkweak
+    name: Souin
+    version: v1.4.4
+    repository: github.com/darkweak/souin/plugins/caddy
+    description: 'A cache system built on top of different reverse-proxy to cache data easily and save precious ms compatible with @traefik, @caddyserver, @nginx and @apache'
+    caddyfile: >
+      {
+        experimental_http3
+        order souin before rewrite
+        souin {
+          distributed true
+          headers Content-Type Authorization
+          olric {
+            url `olric:3320`
+          }
+          ttl 1000
+        }
+      }
+
+      :80
+
+      route /testing-purpose {
+        souin {
+          headers Content-Type
+          ttl 100
+        }
+      }
+      route /testing-purpose-2 {
+        souin {
+          headers Content-Type
+          ttl 200
+        }
+        respond "Hello, s-maxage!"
+      }
+      route `/[A-z]-try*` {
+        souin {
+          headers Authorization
+          ttl 666
+        }
+      }
+    tags:
+      - nginx
+      - fast
+      - alternative
+      - varnish
+      - caddy
+      - traefik
+      - caddy-server
+      - caddyserver
+      - caddy-plugin
+      - http-cache
+      - traefik-v2
+      - caddy2
+      - caddy-module
+      - traefik-plugin
+      - souin-instance
+
+  - author: Dunglas
+    name: Mercure
+    version: v1.0.1
+    repository: github.com/dunglas/mercure
+    description: 'Server-sent live updates: protocol and reference implementation.'
+    caddyfile: >
+      # Learn how to configure the Mercure.rocks Hub on https://mercure.rocks/docs/hub/config
+      {
+        # Debug mode (disable it in production!)
+        {$DEBUG}
+        # HTTP/3 support
+        servers {
+          protocol {
+            experimental_http3
+          }
+        }
+      }
+
+      {$SERVER_NAME:localhost}
+
+      log
+
+      route {
+        encode zstd gzip
+
+        mercure {
+          # Transport to use (default to Bolt)
+          transport_url {$MERCURE_TRANSPORT_URL:bolt://mercure.db}
+          # Publisher JWT key
+          publisher_jwt {env.MERCURE_PUBLISHER_JWT_KEY} {env.MERCURE_PUBLISHER_JWT_ALG}
+          # Subscriber JWT key
+          subscriber_jwt {env.MERCURE_SUBSCRIBER_JWT_KEY} {env.MERCURE_SUBSCRIBER_JWT_ALG}
+          # Extra directives
+          {$MERCURE_EXTRA_DIRECTIVES}
+        }
+
+        respond /healthz 200
+
+        respond "Not Found" 404
+      }
+    tags:
+      - api
+      - graphql
+      - golang
+      - websocket
+      - realtime
+      - web-api
+      - hypermedia
+      - server-sent-events
+      - streaming-api push
+      - subscriptions
+      - hacktoberfest
+      - realtime-api
+      - async-api
+      - mercure
+
+  - author: AnotherOne
+    name: Another Project
+    version: v0.0.1
+    repository: github.com/anotherOne/project
+    description: 'This is a temporary module to include fake data.'
+    caddyfile: >
+      # Learn how to configure the Mercure.rocks Hub on https://mercure.rocks/docs/hub/config
+      {
+        # Debug mode (disable it in production!)
+        {$DEBUG}
+        # HTTP/3 support
+        servers {
+          protocol {
+            experimental_http3
+          }
+        }
+      }
+
+      {$SERVER_NAME:localhost}
+
+      log
+
+      route {
+        encode zstd gzip
+
+        mercure {
+          # Transport to use (default to Bolt)
+          transport_url {$MERCURE_TRANSPORT_URL:bolt://mercure.db}
+          # Publisher JWT key
+          publisher_jwt {env.MERCURE_PUBLISHER_JWT_KEY} {env.MERCURE_PUBLISHER_JWT_ALG}
+          # Subscriber JWT key
+          subscriber_jwt {env.MERCURE_SUBSCRIBER_JWT_KEY} {env.MERCURE_SUBSCRIBER_JWT_ALG}
+          # Extra directives
+          {$MERCURE_EXTRA_DIRECTIVES}
+        }
+
+        respond /healthz 200
+
+        respond "Not Found" 404
+      }
+    tags:
+      - first-tag
+      - second
+      - third tag
+      - another one
+      - this is a long tag
