@@ -29,7 +29,7 @@
             />
         </div>
         <section class="pt-8 flex flex-wrap" id="modules-list-section">
-            {{ range .Site.Data.modules.modules }}
+            {{ range .Site.Data.modules }}
                 <div class="w-full xl:w-1/2 p-4">
                     {{ partial "card.html" . }}
                 </div>
