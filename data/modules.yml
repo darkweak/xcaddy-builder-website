@@ -1,0 +1,390 @@
+- author: greenpau
+  caddyfile: |
+    {
+      http_port     8080
+      https_port    8443
+      debug
+    }
+
+    127.0.0.1, localhost {
+      route /auth* {
+        auth_portal {
+          path /auth
+          backends {
+            local_backend {
+              method local
+              path assets/conf/local/auth/user_db.json
+              realm local
+            }
+          }
+          jwt {
+            token_name access_token
+            token_secret 0e2fdcf8-6868-41a7-884b-7308795fc286
+            token_lifetime 3600
+          }
+          ui {
+            logo_url "https://caddyserver.com/resources/images/caddy-circle-lock.svg"
+            logo_description "Caddy"
+            links {
+              "Prometheus" /prometheus
+              "Alertmanager" /alertmanager
+              "My App" /myapp/
+              "My Identity" /auth/whoami
+              "My Settings" /auth/settings
+            }
+          }
+        }
+      }
+
+      route /prometheus* {
+        jwt {
+          primary yes
+          trusted_tokens {
+            static_secret {
+              token_name access_token
+              token_secret 0e2fdcf8-6868-41a7-884b-7308795fc286
+            }
+          }
+          trusted_public_key e1008f2d testdata/rskeys/test-priv-2.pem
+          auth_url /auth
+          allow roles anonymous guest admin
+          allow roles superadmin
+          allow roles admin editor viewer
+          allow roles AzureAD_Administrator AzureAD_Editor AzureAD_Viewer
+          allow roles everyone Everyone
+        }
+        respond * "prometheus" 200
+      }
+
+      route /alertmanager* {
+        jwt
+        respond * "alertmanager" 200
+      }
+
+      route /myapp* {
+        jwt
+        respond * "myapp" 200
+      }
+
+      route /version* {
+        respond * "1.0.0" 200
+      }
+
+      route {
+        redir https://{hostport}/auth 302
+      }
+    }
+  description: JWT Authorization Plugin for Caddy v2
+  hash: 1f0825e606c2f6493f097ffacbaad60f42c8b61f
+  name: caddy-auth-jwt
+  repository: github.com/greenpau/caddy-auth-jwt
+  tags:
+    - caddy
+    - caddy-plugin
+    - jwt
+    - jwt-authentication
+    - authorization
+    - caddyfile
+    - caddy2
+    - caddy-module
+    - rbac
+  version: v1.2.7
+- author: greenpau
+  caddyfile: |
+    {
+      http_port     8080
+      https_port    8443
+      debug
+    }
+
+    127.0.0.1, localhost {
+      route /auth* {
+        auth_portal {
+          path /auth
+          backends {
+            local_backend {
+              method local
+              path assets/conf/local/auth/user_db.json
+              realm local
+            }
+            ldap_backend {
+              method ldap
+              realm contoso.com
+              servers {
+                ldaps://ldaps.contoso.com ignore_cert_errors
+              }
+              attributes {
+                name givenName
+                surname sn
+                username sAMAccountName
+                member_of memberOf
+                email mail
+              }
+              username "CN=authzsvc,OU=Service Accounts,OU=Administrative Accounts,DC=CONTOSO,DC=COM"
+              password "P@ssW0rd123"
+              search_base_dn "DC=CONTOSO,DC=COM"
+              search_filter "(&(|(sAMAccountName=%s)(mail=%s))(objectclass=user))"
+              groups {
+                "CN=Admins,OU=Security,OU=Groups,DC=CONTOSO,DC=COM" admin
+                "CN=Editors,OU=Security,OU=Groups,DC=CONTOSO,DC=COM" editor
+                "CN=Viewers,OU=Security,OU=Groups,DC=CONTOSO,DC=COM" viewer
+              }
+            }
+          }
+          jwt {
+            token_name access_token
+            token_secret 0e2fdcf8-6868-41a7-884b-7308795fc286
+          }
+          ui {
+            logo_url "https://caddyserver.com/resources/images/caddy-circle-lock.svg"
+            logo_description "Caddy"
+            links {
+              "Prometheus" /prometheus
+              "Alertmanager" /alertmanager
+              "My App" /myapp
+            }
+          }
+        }
+      }
+
+      route /prometheus* {
+        jwt {
+          primary yes
+          trusted_tokens {
+            static_secret {
+              token_name access_token
+              token_secret 0e2fdcf8-6868-41a7-884b-7308795fc286
+            }
+          }
+          auth_url /auth
+          allow roles anonymous guest admin
+          allow roles superadmin
+          allow roles admin editor viewer
+          allow roles AzureAD_Administrator AzureAD_Editor AzureAD_Viewer
+          allow roles everyone Everyone
+        }
+        uri strip_prefix /prometheus
+        reverse_proxy http://127.0.0.1:9080
+      }
+
+      route /alertmanager* {
+        jwt
+        uri strip_prefix /alertmanager
+        reverse_proxy http://127.0.0.1:9083
+      }
+
+      route /myapp* {
+        jwt
+        respond * "myapp" 200
+      }
+
+      route /version* {
+        respond * "1.0.0" 200
+      }
+
+      route {
+        redir https://{hostport}/auth 302
+      }
+    }
+  description: Authentication Plugin for Caddy v2 implementing Form-Based, Basic, Local, LDAP, OpenID Connect, OAuth 2.0 (Github, Google, Facebook, Okta, etc.), SAML Authentication
+  hash: d8ef9f687eca4fc80cf39ac385f23374b1e2b8d4
+  name: caddy-auth-portal
+  repository: github.com/greenpau/caddy-auth-portal
+  tags:
+    - caddy2
+    - caddy
+    - caddy-plugin
+    - caddy-module
+    - authentication
+    - authentication-middleware
+    - authentication-backend
+    - jwt
+    - jwt-tokens
+    - ldap-authentication
+    - ldap-authentication-backend
+    - ldap
+    - authentication-portal
+    - user-registration
+    - user-identity
+    - oauth2
+    - openid-connect
+    - saml
+    - github-authentication
+    - facebook-login
+  version: v1.4.6
+- author: Darkweak
+  caddyfile: |
+    {
+        experimental_http3
+        default_sni domain.com
+        souin {
+            api {
+                basepath /souin-api
+                security {
+                    secret your_secret_key
+                    enable true
+                    users [
+                        {
+                            username user1
+                            password test
+                        }
+                    ]
+                }
+                souin {
+                    security true
+                    enable true
+                }
+            }
+            default_cache {
+                headers [
+                    Authorization
+                ]
+                port {
+                    web 80
+                    tls 443
+                }
+                regex {
+                    exclude 'ARegex'
+                }
+                ttl 1000
+            }
+            reverse_proxy_url 'http://domain.com:81'
+            ssl_providers [
+                traefik
+            ]
+            urls {
+                'domain.com/' {
+                    ttl 100
+                    headers [
+                        Authorization
+                        'Content-Type'
+                    ]
+                }
+                'mysubdomain.domain.com' {
+                    ttl 50
+                    headers [
+                        Authorization
+                        'Content-Type'
+                    ]
+                }
+            }
+        }
+    }
+
+    :80
+
+    route * {
+        souin
+    }
+  description: A cache system built on top of different reverse-proxy to cache data easily and save precious ms compatible with @traefik, @caddyserver, @nginx and @apache
+  hash: 36d67c6bf9d1bbd676452266f1d4a7d693d4d2c2
+  name: Souin
+  repository: github.com/Darkweak/Souin/plugins/caddy
+  tags:
+    - nginx
+    - http-cache
+    - traefik
+    - souin-instance
+    - traefik-plugin
+    - traefik-v2
+    - varnish
+    - alternative
+    - fast
+    - caddy
+    - caddyserver
+    - caddy-plugin
+    - caddy-server
+    - caddy2
+    - caddy-module
+  version: v1.4.4
+- author: abiosoft
+  caddyfile: ""
+  description: Caddy v2 module for running one-off commands
+  hash: ""
+  name: caddy-exec
+  repository: github.com/abiosoft/caddy-exec
+  tags:
+    - caddy
+    - caddyserver
+    - command
+    - exec
+    - caddy-module
+  version: ""
+- author: imgk
+  caddyfile: ""
+  description: ""
+  hash: ""
+  name: caddy-pprof
+  repository: github.com/imgk/caddy-pprof
+  tags:
+    - caddy-module
+    - pprof
+  version: ""
+- author: ueffel
+  caddyfile: ""
+  description: Brotli compression encoder for Caddy
+  hash: ""
+  name: caddy-brotli
+  repository: github.com/ueffel/caddy-brotli
+  tags:
+    - caddy
+    - caddy-plugin
+    - caddyserver
+    - go
+    - caddy-module
+    - compression
+    - brotli
+    - brotli-compression
+  version: ""
+- author: vrongmeal
+  caddyfile: ""
+  description: Git module for Caddy v2
+  hash: ""
+  name: caddygit
+  repository: github.com/vrongmeal/caddygit
+  tags:
+    - caddy
+    - caddy-plugin
+    - caddy-module
+    - caddy-git
+  version: ""
+- author: greenpau
+  caddyfile: ""
+  description: Authentication App for Caddy v2
+  hash: ""
+  name: caddy-auth
+  repository: github.com/greenpau/caddy-auth
+  tags:
+    - caddy
+    - caddyserver
+    - caddy2
+    - caddy-module
+    - caddy-plugin
+    - caddy-auth
+  version: ""
+- author: abiosoft
+  caddyfile: ""
+  description: Caddy v2 hmac signature validation middleware
+  hash: ""
+  name: caddy-hmac
+  repository: github.com/abiosoft/caddy-hmac
+  tags:
+    - caddy
+    - caddyserver
+    - caddy-module
+    - hmac
+    - hmac-signature
+  version: ""
+- author: abiosoft
+  caddyfile: ""
+  description: Caddy v2 module for parsing json request
+  hash: ""
+  name: caddy-json-parse
+  repository: github.com/abiosoft/caddy-json-parse
+  tags:
+    - caddy
+    - caddyserver
+    - caddy-module
+    - json
+    - json-parser
+  version: ""
