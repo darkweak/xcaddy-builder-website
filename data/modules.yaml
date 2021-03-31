@@ -1,281 +1,471 @@
+- author: RussellLuo
+  caddyfile: ""
+  description: |
+    RateLimit implements a handler for rate-limiting.
+  hash: "2021-01-29T01:42:13.78122Z"
+  name: ratelimit
+  repository: github.com/RussellLuo/caddy-ext/ratelimit
+  tags: []
+  version: latest
+- author: abiosoft
+  caddyfile: ""
+  description: |
+    App is top level module that runs shell commands.
+  hash: "2020-07-19T13:33:20.65228Z"
+  name: caddy-exec
+  repository: github.com/abiosoft/caddy-exec
+  tags: []
+  version: latest
+- author: abiosoft
+  caddyfile: ""
+  description: |
+    HMAC implements an HTTP handler that
+    validates request body with hmac.
+  hash: "2020-07-19T13:36:04.852387Z"
+  name: caddy-hmac
+  repository: github.com/abiosoft/caddy-hmac
+  tags: []
+  version: latest
+- author: abiosoft
+  caddyfile: ""
+  description: |
+    JSONParse implements an HTTP handler that parses
+    json body as placeholders.
+  hash: "2020-07-19T13:35:51.247743Z"
+  name: caddy-json-parse
+  repository: github.com/abiosoft/caddy-json-parse
+  tags: []
+  version: latest
+- author: abiosoft
+  caddyfile: ""
+  description: ""
+  hash: "2020-07-19T13:33:47.091962Z"
+  name: caddy-json-schema
+  repository: github.com/abiosoft/caddy-json-schema
+  tags: []
+  version: latest
+- author: abiosoft
+  caddyfile: ""
+  description: ""
+  hash: "2020-07-19T13:34:20.45159Z"
+  name: caddy-named-routes
+  repository: github.com/abiosoft/caddy-named-routes
+  tags: []
+  version: latest
+- author: abiosoft
+  caddyfile: ""
+  description: ""
+  hash: "2020-07-19T13:32:22.020306Z"
+  name: caddy-yaml
+  repository: github.com/abiosoft/caddy-yaml
+  tags: []
+  version: latest
+- author: aksdb
+  caddyfile: ""
+  description: ""
+  hash: "2020-08-02T14:02:27.956805Z"
+  name: caddy-cgi
+  repository: github.com/aksdb/caddy-cgi/v2
+  tags: []
+  version: latest
+- author: caddy-dns
+  caddyfile: ""
+  description: |
+    Provider wraps the provider implementation as a Caddy module.
+  hash: "2021-01-25T13:10:25.949441Z"
+  name: alidns
+  repository: github.com/caddy-dns/alidns
+  tags: []
+  version: latest
+- author: caddy-dns
+  caddyfile: ""
+  description: |
+    Provider wraps the provider implementation as a Caddy module.
+  hash: "2021-01-28T00:16:24.438391Z"
+  name: azure
+  repository: github.com/caddy-dns/azure
+  tags: []
+  version: latest
+- author: caddy-dns
+  caddyfile: ""
+  description: |
+    Provider wraps the provider implementation as a Caddy module.
+  hash: "2020-07-18T02:08:15.066803Z"
+  name: cloudflare
+  repository: github.com/caddy-dns/cloudflare
+  tags: []
+  version: latest
+- author: caddy-dns
+  caddyfile: ""
+  description: |
+    Provider wraps the provider implementation as a Caddy module.
+  hash: "2021-01-21T23:40:53.039188Z"
+  name: digitalocean
+  repository: github.com/caddy-dns/digitalocean
+  tags: []
+  version: latest
+- author: caddy-dns
+  caddyfile: ""
+  description: |
+    Provider wraps the provider implementation as a Caddy module.
+  hash: "2020-07-25T08:48:23.699412Z"
+  name: dnspod
+  repository: github.com/caddy-dns/dnspod
+  tags: []
+  version: latest
+- author: caddy-dns
+  caddyfile: ""
+  description: |
+    Provider wraps the provider implementation as a Caddy module.
+  hash: "2020-12-22T04:55:42.428017Z"
+  name: duckdns
+  repository: github.com/caddy-dns/duckdns
+  tags: []
+  version: latest
+- author: caddy-dns
+  caddyfile: ""
+  description: |
+    Provider wraps the provider implementation as a Caddy module.
+  hash: "2020-09-07T09:50:34.915835Z"
+  name: gandi
+  repository: github.com/caddy-dns/gandi
+  tags: []
+  version: latest
+- author: caddy-dns
+  caddyfile: ""
+  description: |
+    Provider wraps the provider implementation as a Caddy module.
+  hash: "2021-01-19T16:53:11.875578Z"
+  name: hetzner
+  repository: github.com/caddy-dns/hetzner
+  tags: []
+  version: latest
+- author: caddy-dns
+  caddyfile: ""
+  description: |
+    LegoDeprecated is a shim module that allows any and all of the
+    DNS providers in go-acme/lego to be used with Caddy. They must
+    be configured via environment variables, they do not support
+    cancellation in the case of frequent config changes.
+
+    Even though this module is in the dns.providers namespace, it
+    is only a special case for solving ACME challenges, intended to
+    replace the modules that used to be in the now-defunct tls.dns
+    namespace. Using it in other places of the Caddy config will
+    result in errors.
+
+    This module will eventually go away in favor of the modules that
+    make use of the libdns APIs: https://github.com/libdns
+  hash: "2020-07-18T02:06:26.793754Z"
+  name: lego-deprecated
+  repository: github.com/caddy-dns/lego-deprecated
+  tags: []
+  version: latest
+- author: caddy-dns
+  caddyfile: ""
+  description: |
+    Provider wraps the provider implementation as a Caddy module.
+  hash: "2021-01-29T21:14:34.673906Z"
+  name: openstack-designate
+  repository: github.com/caddy-dns/openstack-designate
+  tags: []
+  version: latest
+- author: caddy-dns
+  caddyfile: ""
+  description: |
+    Provider wraps the provider implementation as a Caddy module.
+  hash: "2020-07-21T17:58:22.862247Z"
+  name: route53
+  repository: github.com/caddy-dns/route53
+  tags: []
+  version: latest
+- author: caddy-dns
+  caddyfile: ""
+  description: |
+    Provider wraps the provider implementation as a Caddy module.
+  hash: "2021-01-22T23:59:53.718817Z"
+  name: vultr
+  repository: github.com/caddy-dns/vultr
+  tags: []
+  version: latest
+- author: caddyserver
+  caddyfile: ""
+  description: |
+    DiscardWriter discards all writes.
+  hash: "2020-07-16T01:57:28.41323Z"
+  name: caddy
+  repository: github.com/caddyserver/caddy/v2
+  tags: []
+  version: latest
+- author: caddyserver
+  caddyfile: ""
+  description: ""
+  hash: "2020-07-18T02:11:11.186757Z"
+  name: jsonc-adapter
+  repository: github.com/caddyserver/jsonc-adapter
+  tags: []
+  version: latest
+- author: caddyserver
+  caddyfile: ""
+  description: ""
+  hash: "2020-07-18T02:09:55.283092Z"
+  name: nginx-adapter
+  repository: github.com/caddyserver/nginx-adapter
+  tags: []
+  version: latest
+- author: caddyserver
+  caddyfile: ""
+  description: |
+    NTLMTransport proxies HTTP with NTLM authentication.
+    It basically wraps HTTPTransport so that it is compatible with
+    NTLM's HTTP-hostile requirements. Specifically, it will use
+    HTTPTransport's single, default *http.Transport for all requests
+    (unless the client's connection is already mapped to a different
+    transport) until a request comes in with an Authorization header
+    that has "NTLM" or "Negotiate"; when that happens, NTLMTransport
+    maps the client's connection (by its address, req.RemoteAddr)
+    to a new transport that is used only by that downstream conn.
+    When the upstream connection is closed, the mapping is deleted.
+    This preserves NTLM authentication contexts by ensuring that
+    client connections use the same upstream connection. It does
+    hurt performance a bit, but that's NTLM for you.
+
+    This transport also forces HTTP/1.1 and Keep-Alives in order
+    for NTLM to succeed.
+
+    It is basically the same thing as
+    [nginx's paid ntlm directive](https://nginx.org/en/docs/http/ngx_http_upstream_module.html#ntlm)
+    (but is free in Caddy!).
+  hash: "2020-07-18T02:20:46.670491Z"
+  name: ntlm-transport
+  repository: github.com/caddyserver/ntlm-transport
+  tags: []
+  version: latest
+- author: casbin
+  caddyfile: ""
+  description: ""
+  hash: "2021-01-31T06:18:44.579441Z"
+  name: caddy-authz
+  repository: github.com/casbin/caddy-authz/v2
+  tags: []
+  version: latest
+- author: chukmunnlee
+  caddyfile: ""
+  description: ""
+  hash: "2020-08-27T08:01:11.86175Z"
+  name: caddy-openapi
+  repository: github.com/chukmunnlee/caddy-openapi
+  tags: []
+  version: latest
+- author: dunglas
+  caddyfile: ""
+  description: ""
+  hash: "2021-01-19T13:05:04.354652Z"
+  name: mercure
+  repository: github.com/dunglas/mercure/caddy
+  tags: []
+  version: latest
+- author: dunglas
+  caddyfile: ""
+  description: ""
+  hash: "2021-01-19T13:05:41.500933Z"
+  name: vulcain
+  repository: github.com/dunglas/vulcain/caddy
+  tags: []
+  version: latest
+- author: francislavoie
+  caddyfile: ""
+  description: ""
+  hash: "2020-10-16T03:27:23.90959Z"
+  name: caddy-hcl
+  repository: github.com/francislavoie/caddy-hcl
+  tags: []
+  version: latest
+- author: gamalan
+  caddyfile: ""
+  description: |
+    RedisStorage contain Redis client, and plugin option
+  hash: "2020-09-12T12:56:53.496395Z"
+  name: caddy-tlsredis
+  repository: github.com/gamalan/caddy-tlsredis
+  tags: []
+  version: latest
 - author: greenpau
-  caddyfile: |
-    {
-      http_port     8080
-      https_port    8443
-      debug
-    }
-
-    127.0.0.1, localhost {
-      route /auth* {
-        auth_portal {
-          path /auth
-          backends {
-            local_backend {
-              method local
-              path assets/conf/local/auth/user_db.json
-              realm local
-            }
-          }
-          jwt {
-            token_name access_token
-            token_secret 0e2fdcf8-6868-41a7-884b-7308795fc286
-            token_lifetime 3600
-          }
-          ui {
-            logo_url "https://caddyserver.com/resources/images/caddy-circle-lock.svg"
-            logo_description "Caddy"
-            links {
-              "Prometheus" /prometheus
-              "Alertmanager" /alertmanager
-              "My App" /myapp/
-              "My Identity" /auth/whoami
-              "My Settings" /auth/settings
-            }
-          }
-        }
-      }
-
-      route /prometheus* {
-        jwt {
-          primary yes
-          trusted_tokens {
-            static_secret {
-              token_name access_token
-              token_secret 0e2fdcf8-6868-41a7-884b-7308795fc286
-            }
-          }
-          trusted_public_key e1008f2d testdata/rskeys/test-priv-2.pem
-          auth_url /auth
-          allow roles anonymous guest admin
-          allow roles superadmin
-          allow roles admin editor viewer
-          allow roles AzureAD_Administrator AzureAD_Editor AzureAD_Viewer
-          allow roles everyone Everyone
-        }
-        respond * "prometheus" 200
-      }
-
-      route /alertmanager* {
-        jwt
-        respond * "alertmanager" 200
-      }
-
-      route /myapp* {
-        jwt
-        respond * "myapp" 200
-      }
-
-      route /version* {
-        respond * "1.0.0" 200
-      }
-
-      route {
-        redir https://{hostport}/auth 302
-      }
-    }
-  description: JWT Authorization Plugin for Caddy v2
-  hash: 1f0825e606c2f6493f097ffacbaad60f42c8b61f
+  caddyfile: ""
+  description: |
+    AuthProvider authorizes access to endpoints based on
+    the presense and content of JWT token.
+  hash: "2020-07-23T02:12:44.66099Z"
   name: caddy-auth-jwt
   repository: github.com/greenpau/caddy-auth-jwt
-  tags:
-    - caddy
-    - caddy-plugin
-    - jwt
-    - jwt-authentication
-    - authorization
-    - caddyfile
-    - caddy2
-    - caddy-module
-    - rbac
-  version: v1.2.7
+  tags: []
+  version: latest
 - author: greenpau
-  caddyfile: |
-    {
-      http_port     8080
-      https_port    8443
-      debug
-    }
-
-    127.0.0.1, localhost {
-      route /auth* {
-        auth_portal {
-          path /auth
-          backends {
-            local_backend {
-              method local
-              path assets/conf/local/auth/user_db.json
-              realm local
-            }
-            ldap_backend {
-              method ldap
-              realm contoso.com
-              servers {
-                ldaps://ldaps.contoso.com ignore_cert_errors
-              }
-              attributes {
-                name givenName
-                surname sn
-                username sAMAccountName
-                member_of memberOf
-                email mail
-              }
-              username "CN=authzsvc,OU=Service Accounts,OU=Administrative Accounts,DC=CONTOSO,DC=COM"
-              password "P@ssW0rd123"
-              search_base_dn "DC=CONTOSO,DC=COM"
-              search_filter "(&(|(sAMAccountName=%s)(mail=%s))(objectclass=user))"
-              groups {
-                "CN=Admins,OU=Security,OU=Groups,DC=CONTOSO,DC=COM" admin
-                "CN=Editors,OU=Security,OU=Groups,DC=CONTOSO,DC=COM" editor
-                "CN=Viewers,OU=Security,OU=Groups,DC=CONTOSO,DC=COM" viewer
-              }
-            }
-          }
-          jwt {
-            token_name access_token
-            token_secret 0e2fdcf8-6868-41a7-884b-7308795fc286
-          }
-          ui {
-            logo_url "https://caddyserver.com/resources/images/caddy-circle-lock.svg"
-            logo_description "Caddy"
-            links {
-              "Prometheus" /prometheus
-              "Alertmanager" /alertmanager
-              "My App" /myapp
-            }
-          }
-        }
-      }
-
-      route /prometheus* {
-        jwt {
-          primary yes
-          trusted_tokens {
-            static_secret {
-              token_name access_token
-              token_secret 0e2fdcf8-6868-41a7-884b-7308795fc286
-            }
-          }
-          auth_url /auth
-          allow roles anonymous guest admin
-          allow roles superadmin
-          allow roles admin editor viewer
-          allow roles AzureAD_Administrator AzureAD_Editor AzureAD_Viewer
-          allow roles everyone Everyone
-        }
-        uri strip_prefix /prometheus
-        reverse_proxy http://127.0.0.1:9080
-      }
-
-      route /alertmanager* {
-        jwt
-        uri strip_prefix /alertmanager
-        reverse_proxy http://127.0.0.1:9083
-      }
-
-      route /myapp* {
-        jwt
-        respond * "myapp" 200
-      }
-
-      route /version* {
-        respond * "1.0.0" 200
-      }
-
-      route {
-        redir https://{hostport}/auth 302
-      }
-    }
-  description: Authentication Plugin for Caddy v2 implementing Form-Based, Basic, Local, LDAP, OpenID Connect, OAuth 2.0 (Github, Google, Facebook, Okta, etc.), SAML Authentication
-  hash: d8ef9f687eca4fc80cf39ac385f23374b1e2b8d4
+  caddyfile: ""
+  description: |
+    AuthMiddleware implements Form-Based, Basic, Local, LDAP,
+    OpenID Connect, OAuth 2.0, SAML Authentication.
+  hash: "2020-11-17T22:22:42.057656Z"
   name: caddy-auth-portal
   repository: github.com/greenpau/caddy-auth-portal
-  tags:
-    - caddy2
-    - caddy
-    - caddy-plugin
-    - caddy-module
-    - authentication
-    - authentication-middleware
-    - authentication-backend
-    - jwt
-    - jwt-tokens
-    - ldap-authentication
-    - ldap-authentication-backend
-    - ldap
-    - authentication-portal
-    - user-registration
-    - user-identity
-    - oauth2
-    - openid-connect
-    - saml
-    - github-authentication
-    - facebook-login
-  version: v1.4.6
+  tags: []
+  version: latest
+- author: greenpau
+  caddyfile: ""
+  description: |
+    RequestDebugger is a middleware which displays the content of the request it
+    handles. It helps troubleshooting web requests by exposing headers
+    (e.g. cookies), URL parameters, etc.
+  hash: "2020-09-18T17:44:54.349455Z"
+  name: caddy-trace
+  repository: github.com/greenpau/caddy-trace
+  tags: []
+  version: latest
+- author: hairyhenderson
+  caddyfile: ""
+  description: |
+    Teapot implements a static "418 I'm a teapot" response to all requests on the route
+  hash: "2020-07-20T23:24:16.574918Z"
+  name: caddy-teapot-module
+  repository: github.com/hairyhenderson/caddy-teapot-module
+  tags: []
+  version: latest
+- author: hslatman
+  caddyfile: ""
+  description: |
+    CrowdSec is a Caddy App that functions as a CrowdSec bouncer
+  hash: "2020-12-30T11:11:22.766477Z"
+  name: caddy-crowdsec-bouncer
+  repository: github.com/hslatman/caddy-crowdsec-bouncer/pkg/crowdsec
+  tags: []
+  version: latest
+- author: hslatman
+  caddyfile: ""
+  description: |
+    Validator is used to validate OpenAPI requests and responses against an OpenAPI specification
+  hash: "2020-08-30T22:04:13.851115Z"
+  name: caddy-openapi-validator
+  repository: github.com/hslatman/caddy-openapi-validator
+  tags: []
+  version: latest
+- author: kirsch33
+  caddyfile: ""
+  description: ""
+  hash: "2020-12-23T17:02:57.017227Z"
+  name: realip
+  repository: github.com/kirsch33/realip
+  tags: []
+  version: latest
+- author: lindenlab
+  caddyfile: ""
+  description: |
+    S3Proxy implements a proxy to return, set, delete or browse objects from S3
+  hash: "2020-12-18T08:21:45.278112Z"
+  name: caddy-s3-proxy
+  repository: github.com/lindenlab/caddy-s3-proxy
+  tags: []
+  version: latest
+- author: lolPants
+  caddyfile: ""
+  description: |
+    Middleware implements an HTTP handler that writes a
+    unique request ID to response headers.
+  hash: "2020-07-28T18:04:55.450897Z"
+  name: caddy-requestid
+  repository: github.com/lolPants/caddy-requestid
+  tags: []
+  version: latest
+- author: lucaslorentz
+  caddyfile: ""
+  description: ""
+  hash: "2020-08-10T18:21:09.388867Z"
+  name: caddy-docker-proxy
+  repository: github.com/lucaslorentz/caddy-docker-proxy/plugin/v2
+  tags: []
+  version: latest
+- author: mastercactapus
+  caddyfile: ""
+  description: ""
+  hash: "2020-09-23T22:26:56.705089Z"
+  name: caddy2-proxyprotocol
+  repository: github.com/mastercactapus/caddy2-proxyprotocol
+  tags: []
+  version: latest
+- author: mholt
+  caddyfile: ""
+  description: |
+    WebDAV implements an HTTP handler for responding to WebDAV clients.
+  hash: "2020-07-18T02:04:43.667911Z"
+  name: caddy-webdav
+  repository: github.com/mholt/caddy-webdav
+  tags: []
+  version: latest
+- author: porech
+  caddyfile: ""
+  description: ""
+  hash: "2020-10-11T16:00:44.493715Z"
+  name: caddy-maxmind-geolocation
+  repository: github.com/porech/caddy-maxmind-geolocation
+  tags: []
+  version: latest
+- author: pteich
+  caddyfile: ""
+  description: |
+    Storage holds all parameters for the Consul connection
+  hash: "2020-10-09T08:13:03.982308Z"
+  name: caddy-tlsconsul
+  repository: github.com/pteich/caddy-tlsconsul
+  tags: []
+  version: latest
+- author: silinternational
+  caddyfile: ""
+  description: |
+    Storage implements certmagic.Storage to facilitate
+    storage of certificates in DynamoDB for a clustered environment.
+    Also implements certmagic.Locker to facilitate locking
+    and unlocking of cert data during storage
+  hash: "2020-09-22T13:49:25.765054Z"
+  name: certmagic-storage-dynamodb
+  repository: github.com/silinternational/certmagic-storage-dynamodb/v2
+  tags: []
+  version: latest
+- author: sjtug
+  caddyfile: ""
+  description: |
+    Middleware implements an HTTP handler that writes the
+    visitor's IP address to a file or stream.
+  hash: "2021-03-14T21:31:41.197316Z"
+  name: caddy2-filter
+  repository: github.com/sjtug/caddy2-filter
+  tags: []
+  version: latest
+- author: ss098
+  caddyfile: ""
+  description: ""
+  hash: "2020-09-12T15:28:43.5711Z"
+  name: certmagic-s3
+  repository: github.com/ss098/certmagic-s3
+  tags: []
+  version: latest
+- author: techknowlogick
+  caddyfile: ""
+  description: ""
+  hash: "2020-07-22T23:09:35.836744Z"
+  name: caddy-s3browser
+  repository: github.com/techknowlogick/caddy-s3browser
+  tags: []
+  version: latest
+- author: caddy
+  caddyfile: ""
+  description: |
+    Module represents the GoPkg Caddy module.
+  hash: "2021-02-15T23:34:52.704583Z"
+  name: gopkg
+  repository: magnax.ca/caddy/gopkg
+  tags: []
+  version: latest
 - author: Darkweak
-  caddyfile: |
-    {
-        experimental_http3
-        default_sni domain.com
-        souin {
-            api {
-                basepath /souin-api
-                security {
-                    secret your_secret_key
-                    enable true
-                    users [
-                        {
-                            username user1
-                            password test
-                        }
-                    ]
-                }
-                souin {
-                    security true
-                    enable true
-                }
-            }
-            default_cache {
-                headers [
-                    Authorization
-                ]
-                port {
-                    web 80
-                    tls 443
-                }
-                regex {
-                    exclude 'ARegex'
-                }
-                ttl 1000
-            }
-            reverse_proxy_url 'http://domain.com:81'
-            ssl_providers [
-                traefik
-            ]
-            urls {
-                'domain.com/' {
-                    ttl 100
-                    headers [
-                        Authorization
-                        'Content-Type'
-                    ]
-                }
-                'mysubdomain.domain.com' {
-                    ttl 50
-                    headers [
-                        Authorization
-                        'Content-Type'
-                    ]
-                }
-            }
-        }
-    }
-
-    :80
-
-    route * {
-        souin
-    }
+  caddyfile: ""
   description: A cache system built on top of different reverse-proxy to cache data easily and save precious ms compatible with @traefik, @caddyserver, @nginx and @apache
   hash: 36d67c6bf9d1bbd676452266f1d4a7d693d4d2c2
   name: Souin
@@ -297,19 +487,17 @@
     - caddy2
     - caddy-module
   version: v1.4.4
-- author: abiosoft
+- author: mholt
   caddyfile: ""
-  description: Caddy v2 module for running one-off commands
+  description: HTTP rate limiting module for Caddy 2
   hash: ""
-  name: caddy-exec
-  repository: github.com/abiosoft/caddy-exec
+  name: caddy-ratelimit
+  repository: github.com/mholt/caddy-ratelimit
   tags:
-    - caddy
-    - caddyserver
-    - command
-    - exec
     - caddy-module
-  version: ""
+    - caddy
+    - rate-limiting
+  version: latest
 - author: imgk
   caddyfile: ""
   description: ""
@@ -319,7 +507,7 @@
   tags:
     - caddy-module
     - pprof
-  version: ""
+  version: latest
 - author: ueffel
   caddyfile: ""
   description: Brotli compression encoder for Caddy
@@ -335,7 +523,7 @@
     - compression
     - brotli
     - brotli-compression
-  version: ""
+  version: latest
 - author: vrongmeal
   caddyfile: ""
   description: Git module for Caddy v2
@@ -347,7 +535,7 @@
     - caddy-plugin
     - caddy-module
     - caddy-git
-  version: ""
+  version: latest
 - author: greenpau
   caddyfile: ""
   description: Authentication App for Caddy v2
@@ -361,30 +549,4 @@
     - caddy-module
     - caddy-plugin
     - caddy-auth
-  version: ""
-- author: abiosoft
-  caddyfile: ""
-  description: Caddy v2 hmac signature validation middleware
-  hash: ""
-  name: caddy-hmac
-  repository: github.com/abiosoft/caddy-hmac
-  tags:
-    - caddy
-    - caddyserver
-    - caddy-module
-    - hmac
-    - hmac-signature
-  version: ""
-- author: abiosoft
-  caddyfile: ""
-  description: Caddy v2 module for parsing json request
-  hash: ""
-  name: caddy-json-parse
-  repository: github.com/abiosoft/caddy-json-parse
-  tags:
-    - caddy
-    - caddyserver
-    - caddy-module
-    - json
-    - json-parser
-  version: ""
+  version: latest
