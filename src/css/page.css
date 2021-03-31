@@ -7,3 +7,14 @@
 :hover {
     transition: all 350ms ease;
 }
+
+.line-clamp-5 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    overflow: hidden;
+}
+
+.max-h-48 {
+    max-height: 12rem;
+}

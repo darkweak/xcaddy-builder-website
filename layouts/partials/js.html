@@ -42,13 +42,14 @@
       resume.innerHTML = '';
       selectedModules.map(m => {
         const wrapper = document.createElement('div');
-        wrapper.classList.add('py-4')
+        wrapper.classList.add('pt-4')
         wrapper.innerHTML = `<div class="border-t border-gray-200 w-full pt-4">
             <span class="block font-bold">${ m.name }</span>
             <span class="block text-sm font-thin">${ m.version }</span>
           </div>`;
         resume.appendChild(wrapper);
       })
+      document.getElementById('selectedCount').innerText = selectedModules.length.toString(10);
       document.getElementById('command').innerText = `${baseCommand}${selectedModules.map(s => ` --with ${s.repository}`).join('')}`;
     })
   })

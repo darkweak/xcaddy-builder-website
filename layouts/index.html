@@ -10,15 +10,21 @@
 {{ end }}
 
 {{ define "resume" }}
-    <div class="sticky top-0 p-8">
-        <h2 class="text-xl font-extrabold">Selected plugins</h2>
+    <div class="sticky top-0 p-8 max-h-48 md:max-h-screen overflow-y-scroll">
+        <h2 class="text-xl font-extrabold flex justify-between">
+            Selected
+            <span
+                class="inline-flex my-auto items-center justify-center px-2 py-1 text-xs font-bold leading-none text-indigo-100 bg-indigo-700 rounded"
+                id="selectedCount"
+            >0</span>
+        </h2>
         <div id="resume-list"></div>
     </div>
 {{ end }}
 
 {{ define "modules-list" }}
-    <div class="p-8">
-        <div class="px-4">
+    <div class="p-4 md:p-8">
+        <div class="md:px-4 flex flex-col md:flex-row">
             <label for="modules-search"></label>
             <input
                 id="modules-search"
@@ -27,10 +33,13 @@
                 placeholder="Search modules"
                 class="p-2 placeholder-blueGray-300 w-full sm:w-1/2 lg:w-1/3 text-blueGray-600 relative text-lg bg-white bg-white rounded text-sm border-0 shadow"
             />
+            <span class="pt-4 my-auto md:pt-0 md:pl-4 font-extrabold text-gray-500">
+                {{ len .Site.Data.modules }} available plugins
+            </span>
         </div>
         <section class="pt-8 flex flex-wrap" id="modules-list-section">
             {{ range .Site.Data.modules }}
-                <div class="w-full xl:w-1/2 p-4">
+                <div class="w-full xl:w-1/2 py-4 px-0 md:px-4">
                     {{ partial "card.html" . }}
                 </div>
             {{ end }}
