@@ -1,0 +1,891 @@
+- author: HeavenVolkoff
+  caddyfile: ""
+  description: http.handlers.authelia implements a plugin for securing routes with authentication
+  hash: "2021-08-06T01:14:17.819196Z"
+  name: caddy-authelia
+  repository: github.com/HeavenVolkoff/caddy-authelia/plugin
+  tags: []
+  version: latest
+- author: RussellLuo
+  caddyfile: ""
+  description: ""
+  hash: "2021-06-20T13:48:33.325546Z"
+  name: flagr
+  repository: github.com/RussellLuo/caddy-ext/flagr
+  tags: []
+  version: latest
+- author: RussellLuo
+  caddyfile: ""
+  description: http.handlers.rate_limit implements a handler for rate-limiting.
+  hash: "2021-01-29T01:42:13.78122Z"
+  name: ratelimit
+  repository: github.com/RussellLuo/caddy-ext/ratelimit
+  tags: []
+  version: latest
+- author: RussellLuo
+  caddyfile: ""
+  description: |-
+    http.handlers.request_body_var implements an HTTP handler that replaces {http.request.body.*}
+    with the value of the given field from request body, if any.
+  hash: "2022-02-23T07:58:40.889409Z"
+  name: requestbodyvar
+  repository: github.com/RussellLuo/caddy-ext/requestbodyvar
+  tags: []
+  version: latest
+- author: RussellLuo
+  caddyfile: ""
+  description: ""
+  hash: "2021-09-07T00:46:01.438562Z"
+  name: olaf
+  repository: github.com/RussellLuo/olaf/caddyconfig/adapter
+  tags: []
+  version: latest
+- author: WingLim
+  caddyfile: ""
+  description: http.handlers.webhook is the module configuration.
+  hash: "2021-06-12T07:13:46.119938Z"
+  name: caddy-webhook
+  repository: github.com/WingLim/caddy-webhook
+  tags: []
+  version: latest
+- author: abiosoft
+  caddyfile: ""
+  description: exec is top level module that runs shell commands.
+  hash: "2020-07-19T13:33:20.65228Z"
+  name: caddy-exec
+  repository: github.com/abiosoft/caddy-exec
+  tags: []
+  version: latest
+- author: abiosoft
+  caddyfile: ""
+  description: |-
+    http.handlers.hmac implements an HTTP handler that
+    validates request body with hmac.
+  hash: "2020-07-19T13:36:04.852387Z"
+  name: caddy-hmac
+  repository: github.com/abiosoft/caddy-hmac
+  tags: []
+  version: latest
+- author: abiosoft
+  caddyfile: ""
+  description: |-
+    http.handlers.json_parse implements an HTTP handler that parses
+    json body as placeholders.
+  hash: "2020-07-19T13:35:51.247743Z"
+  name: caddy-json-parse
+  repository: github.com/abiosoft/caddy-json-parse
+  tags: []
+  version: latest
+- author: abiosoft
+  caddyfile: ""
+  description: ""
+  hash: "2020-07-19T13:33:47.091962Z"
+  name: caddy-json-schema
+  repository: github.com/abiosoft/caddy-json-schema
+  tags: []
+  version: latest
+- author: abiosoft
+  caddyfile: ""
+  description: ""
+  hash: "2020-07-19T13:34:20.45159Z"
+  name: caddy-named-routes
+  repository: github.com/abiosoft/caddy-named-routes
+  tags: []
+  version: latest
+- author: abiosoft
+  caddyfile: ""
+  description: ""
+  hash: "2020-07-19T13:32:22.020306Z"
+  name: caddy-yaml
+  repository: github.com/abiosoft/caddy-yaml
+  tags: []
+  version: latest
+- author: aksdb
+  caddyfile: ""
+  description: ""
+  hash: "2020-08-02T14:02:27.956805Z"
+  name: caddy-cgi
+  repository: github.com/aksdb/caddy-cgi/v2
+  tags: []
+  version: latest
+- author: baldinof
+  caddyfile: ""
+  description: ""
+  hash: "2021-07-07T07:31:46.811256Z"
+  name: caddy-supervisor
+  repository: github.com/baldinof/caddy-supervisor
+  tags: []
+  version: latest
+- author: caddy-dns
+  caddyfile: ""
+  description: dns.providers.alidns wraps the provider implementation as a Caddy module.
+  hash: "2021-01-25T13:10:25.949441Z"
+  name: alidns
+  repository: github.com/caddy-dns/alidns
+  tags: []
+  version: latest
+- author: caddy-dns
+  caddyfile: ""
+  description: dns.providers.azure wraps the provider implementation as a Caddy module.
+  hash: "2021-01-28T00:16:24.438391Z"
+  name: azure
+  repository: github.com/caddy-dns/azure
+  tags: []
+  version: latest
+- author: caddy-dns
+  caddyfile: ""
+  description: dns.providers.cloudflare wraps the provider implementation as a Caddy module.
+  hash: "2021-05-05T23:01:21.21005Z"
+  name: cloudflare
+  repository: github.com/caddy-dns/cloudflare
+  tags: []
+  version: latest
+- author: caddy-dns
+  caddyfile: ""
+  description: dns.providers.digitalocean wraps the provider implementation as a Caddy module.
+  hash: "2021-01-21T23:40:53.039188Z"
+  name: digitalocean
+  repository: github.com/caddy-dns/digitalocean
+  tags: []
+  version: latest
+- author: caddy-dns
+  caddyfile: ""
+  description: dns.providers.dnspod wraps the provider implementation as a Caddy module.
+  hash: "2020-07-25T08:48:23.699412Z"
+  name: dnspod
+  repository: github.com/caddy-dns/dnspod
+  tags: []
+  version: latest
+- author: caddy-dns
+  caddyfile: ""
+  description: dns.providers.duckdns wraps the provider implementation as a Caddy module.
+  hash: "2020-12-22T04:55:42.428017Z"
+  name: duckdns
+  repository: github.com/caddy-dns/duckdns
+  tags: []
+  version: latest
+- author: caddy-dns
+  caddyfile: ""
+  description: dns.providers.gandi wraps the provider implementation as a Caddy module.
+  hash: "2021-10-20T14:53:31.238584Z"
+  name: gandi
+  repository: github.com/caddy-dns/gandi
+  tags: []
+  version: latest
+- author: caddy-dns
+  caddyfile: ""
+  description: dns.providers.godaddy wraps the provider implementation as a Caddy module.
+  hash: "2022-01-28T17:03:49.463153Z"
+  name: godaddy
+  repository: github.com/caddy-dns/godaddy
+  tags: []
+  version: latest
+- author: caddy-dns
+  caddyfile: ""
+  description: dns.providers.googleclouddns lets Caddy read and manipulate DNS records hosted by this DNS provider.
+  hash: "2021-10-12T03:10:39.435263Z"
+  name: googleclouddns
+  repository: github.com/caddy-dns/googleclouddns
+  tags: []
+  version: latest
+- author: caddy-dns
+  caddyfile: ""
+  description: dns.providers.hetzner wraps the provider implementation as a Caddy module.
+  hash: "2021-01-19T16:53:11.875578Z"
+  name: hetzner
+  repository: github.com/caddy-dns/hetzner
+  tags: []
+  version: latest
+- author: caddy-dns
+  caddyfile: ""
+  description: |-
+    dns.providers.lego_deprecated is a shim module that allows any and all of the
+    DNS providers in go-acme/lego to be used with Caddy. They must
+    be configured via environment variables, they do not support
+    cancellation in the case of frequent config changes.
+
+    Even though this module is in the dns.providers namespace, it
+    is only a special case for solving ACME challenges, intended to
+    replace the modules that used to be in the now-defunct tls.dns
+    namespace. Using it in other places of the Caddy config will
+    result in errors.
+
+    This module will eventually go away in favor of the modules that
+    make use of the libdns APIs: https://github.com/libdns
+  hash: "2020-07-18T02:06:26.793754Z"
+  name: lego-deprecated
+  repository: github.com/caddy-dns/lego-deprecated
+  tags: []
+  version: latest
+- author: caddy-dns
+  caddyfile: ""
+  description: dns.providers.metaname wraps the provider implementation as a Caddy module.
+  hash: "2022-02-18T00:48:59.137266Z"
+  name: metaname
+  repository: github.com/caddy-dns/metaname
+  tags: []
+  version: latest
+- author: caddy-dns
+  caddyfile: ""
+  description: dns.providers.netcup lets Caddy read and manipulate DNS records hosted by this DNS provider.
+  hash: "2022-01-14T19:53:24.729496Z"
+  name: netcup
+  repository: github.com/caddy-dns/netcup
+  tags: []
+  version: latest
+- author: caddy-dns
+  caddyfile: ""
+  description: dns.providers.openstack-designate wraps the provider implementation as a Caddy module.
+  hash: "2022-01-18T17:25:32.960365Z"
+  name: openstack-designate
+  repository: github.com/caddy-dns/openstack-designate
+  tags: []
+  version: latest
+- author: caddy-dns
+  caddyfile: ""
+  description: dns.providers.route53 wraps the provider implementation as a Caddy module.
+  hash: "2020-07-21T17:58:22.862247Z"
+  name: route53
+  repository: github.com/caddy-dns/route53
+  tags: []
+  version: latest
+- author: caddy-dns
+  caddyfile: ""
+  description: dns.providers.vultr wraps the provider implementation as a Caddy module.
+  hash: "2021-01-22T23:59:53.718817Z"
+  name: vultr
+  repository: github.com/caddy-dns/vultr
+  tags: []
+  version: latest
+- author: caddyserver
+  caddyfile: ""
+  description: http.handlers.cache declaration.
+  hash: "2022-02-17T16:47:09.08014Z"
+  name: cache-handler
+  repository: github.com/caddyserver/cache-handler
+  tags: []
+  version: latest
+- author: caddyserver
+  caddyfile: ""
+  description: ""
+  hash: "2020-07-18T02:11:11.186757Z"
+  name: jsonc-adapter
+  repository: github.com/caddyserver/jsonc-adapter
+  tags: []
+  version: latest
+- author: caddyserver
+  caddyfile: ""
+  description: ""
+  hash: "2020-07-18T02:09:55.283092Z"
+  name: nginx-adapter
+  repository: github.com/caddyserver/nginx-adapter
+  tags: []
+  version: latest
+- author: caddyserver
+  caddyfile: ""
+  description: |-
+    http.reverse_proxy.transport.http_ntlm proxies HTTP with NTLM authentication.
+    It basically wraps HTTPTransport so that it is compatible with
+    NTLM's HTTP-hostile requirements. Specifically, it will use
+    HTTPTransport's single, default *http.Transport for all requests
+    (unless the client's connection is already mapped to a different
+    transport) until a request comes in with an Authorization header
+    that has "NTLM" or "Negotiate"; when that happens, NTLMTransport
+    maps the client's connection (by its address, req.RemoteAddr)
+    to a new transport that is used only by that downstream conn.
+    When the upstream connection is closed, the mapping is deleted.
+    This preserves NTLM authentication contexts by ensuring that
+    client connections use the same upstream connection. It does
+    hurt performance a bit, but that's NTLM for you.
+
+    This transport also forces HTTP/1.1 and Keep-Alives in order
+    for NTLM to succeed.
+
+    It is basically the same thing as
+    [nginx's paid ntlm directive](https://nginx.org/en/docs/http/ngx_http_upstream_module.html#ntlm)
+    (but is free in Caddy!).
+  hash: "2020-07-18T02:20:46.670491Z"
+  name: ntlm-transport
+  repository: github.com/caddyserver/ntlm-transport
+  tags: []
+  version: latest
+- author: caddyserver
+  caddyfile: ""
+  description: |-
+    http.handlers.replace_response manipulates response bodies by performing
+    substring or regex replacements.
+  hash: "2021-05-26T04:55:09.238454Z"
+  name: replace-response
+  repository: github.com/caddyserver/replace-response
+  tags: []
+  version: latest
+- author: caddyserver
+  caddyfile: ""
+  description: ""
+  hash: "2022-03-21T03:37:47.742685Z"
+  name: transform-encoder
+  repository: github.com/caddyserver/transform-encoder
+  tags: []
+  version: latest
+- author: casbin
+  caddyfile: ""
+  description: ""
+  hash: "2021-01-31T06:18:44.579441Z"
+  name: caddy-authz
+  repository: github.com/casbin/caddy-authz/v2
+  tags: []
+  version: latest
+- author: chukmunnlee
+  caddyfile: ""
+  description: ""
+  hash: "2020-08-27T08:01:11.86175Z"
+  name: caddy-openapi
+  repository: github.com/chukmunnlee/caddy-openapi
+  tags: []
+  version: latest
+- author: circa10a
+  caddyfile: ""
+  description: http.handlers.geofence implements IP geofencing functionality. https://github.com/circa10a/caddy-geofence
+  hash: "2021-11-16T01:30:43.335033Z"
+  name: caddy-geofence
+  repository: github.com/circa10a/caddy-geofence
+  tags: []
+  version: latest
+- author: cubic3d
+  caddyfile: ""
+  description: ""
+  hash: "2021-08-22T18:14:21.464561Z"
+  name: caddy-ct
+  repository: github.com/cubic3d/caddy-ct
+  tags: []
+  version: latest
+- author: cubic3d
+  caddyfile: ""
+  description: http.handlers.quantity_limiter limits the number of successful requests for a token and allows the counter to be reset.
+  hash: "2021-08-22T23:15:10.366517Z"
+  name: caddy-quantity-limiter
+  repository: github.com/cubic3d/caddy-quantity-limiter
+  tags: []
+  version: latest
+- author: dunglas
+  caddyfile: ""
+  description: http.handlers.mercure implements a Mercure hub as a Caddy module. Mercure is a protocol allowing to push data updates to web browsers and other HTTP clients in a convenient, fast, reliable and battery-efficient way.
+  hash: "2021-01-19T13:05:04.354652Z"
+  name: mercure
+  repository: github.com/dunglas/mercure/caddy
+  tags: []
+  version: latest
+- author: dunglas
+  caddyfile: ""
+  description: ""
+  hash: "2021-01-19T13:05:41.500933Z"
+  name: vulcain
+  repository: github.com/dunglas/vulcain/caddy
+  tags: []
+  version: latest
+- author: firecow
+  caddyfile: ""
+  description: ""
+  hash: "2022-02-27T13:14:20.421637Z"
+  name: caddy-elastic-encoder
+  repository: github.com/firecow/caddy-elastic-encoder
+  tags: []
+  version: latest
+- author: firecow
+  caddyfile: ""
+  description: ""
+  hash: "2022-02-26T08:08:12.000657Z"
+  name: caddy-forward-auth
+  repository: github.com/firecow/caddy-forward-auth
+  tags: []
+  version: latest
+- author: francislavoie
+  caddyfile: ""
+  description: ""
+  hash: "2020-10-16T03:27:23.90959Z"
+  name: caddy-hcl
+  repository: github.com/francislavoie/caddy-hcl
+  tags: []
+  version: latest
+- author: gamalan
+  caddyfile: ""
+  description: caddy.storage.redis contain Redis client, and plugin option
+  hash: "2020-09-12T12:56:53.496395Z"
+  name: caddy-tlsredis
+  repository: github.com/gamalan/caddy-tlsredis
+  tags: []
+  version: latest
+- author: ggicci
+  caddyfile: ""
+  description: http.authentication.providers.jwt facilitates JWT (JSON Web Token) authentication.
+  hash: "2021-07-03T13:18:38.952564Z"
+  name: caddy-jwt
+  repository: github.com/ggicci/caddy-jwt
+  tags: []
+  version: latest
+- author: greenpau
+  caddyfile: ""
+  description: http.handlers.git implements git repository manager.
+  hash: "2022-01-13T13:34:54.966946Z"
+  name: caddy-git
+  repository: github.com/greenpau/caddy-git
+  tags: []
+  version: latest
+- author: greenpau
+  caddyfile: ""
+  description: |-
+    http.authentication.providers.authorizer authorizes access to endpoints based on
+    the presense and content of JWT token.
+  hash: "2022-01-24T23:25:50.010346Z"
+  name: caddy-security
+  repository: github.com/greenpau/caddy-security
+  tags: []
+  version: latest
+- author: greenpau
+  caddyfile: ""
+  description: |-
+    http.handlers.trace is a middleware which displays the content of the request it
+    handles. It helps troubleshooting web requests by exposing headers
+    (e.g. cookies), URL parameters, etc.
+  hash: "2020-09-18T17:44:54.349455Z"
+  name: caddy-trace
+  repository: github.com/greenpau/caddy-trace
+  tags: []
+  version: latest
+- author: hairyhenderson
+  caddyfile: ""
+  description: http.handlers.teapot implements a static "418 I'm a teapot" response to all requests on the route
+  hash: "2020-07-20T23:24:16.574918Z"
+  name: caddy-teapot-module
+  repository: github.com/hairyhenderson/caddy-teapot-module
+  tags: []
+  version: latest
+- author: hslatman
+  caddyfile: ""
+  description: |-
+    crowdsec is a Caddy App that functions as a CrowdSec bouncer. It acts
+    as a CrowdSec API client as well as a local cache for CrowdSec decisions,
+    which can be used by the HTTP handler and Layer4 matcher to decide if
+    a request or connection is allowed or not.
+  hash: "2021-08-05T21:53:03.781244Z"
+  name: caddy-crowdsec-bouncer
+  repository: github.com/hslatman/caddy-crowdsec-bouncer
+  tags: []
+  version: latest
+- author: hslatman
+  caddyfile: ""
+  description: http.handlers.openapi_validator is used to validate OpenAPI requests and responses against an OpenAPI specification
+  hash: "2020-08-30T22:04:13.851115Z"
+  name: caddy-openapi-validator
+  repository: github.com/hslatman/caddy-openapi-validator
+  tags: []
+  version: latest
+- author: kirsch33
+  caddyfile: ""
+  description: ""
+  hash: "2020-12-23T17:02:57.017227Z"
+  name: realip
+  repository: github.com/kirsch33/realip
+  tags: []
+  version: latest
+- author: lindenlab
+  caddyfile: ""
+  description: http.handlers.s3proxy implements a proxy to return, set, delete or browse objects from S3
+  hash: "2020-12-18T08:21:45.278112Z"
+  name: caddy-s3-proxy
+  repository: github.com/lindenlab/caddy-s3-proxy
+  tags: []
+  version: latest
+- author: lolPants
+  caddyfile: ""
+  description: |-
+    http.handlers.request_id implements an HTTP handler that writes a
+    unique request ID to response headers.
+  hash: "2020-07-28T18:04:55.450897Z"
+  name: caddy-requestid
+  repository: github.com/lolPants/caddy-requestid
+  tags: []
+  version: latest
+- author: lucaslorentz
+  caddyfile: ""
+  description: ""
+  hash: "2020-08-10T18:21:09.388867Z"
+  name: caddy-docker-proxy
+  repository: github.com/lucaslorentz/caddy-docker-proxy/plugin/v2
+  tags: []
+  version: latest
+- author: mastercactapus
+  caddyfile: ""
+  description: ""
+  hash: "2020-09-23T22:26:56.705089Z"
+  name: caddy2-proxyprotocol
+  repository: github.com/mastercactapus/caddy2-proxyprotocol
+  tags: []
+  version: latest
+- author: mholt
+  caddyfile: ""
+  description: |-
+    dynamic_dns is a Caddy app that keeps your DNS records updated with the public
+    IP address of your instance. It updates A and AAAA records.
+  hash: "2021-05-25T22:35:03.786153Z"
+  name: caddy-dynamicdns
+  repository: github.com/mholt/caddy-dynamicdns
+  tags: []
+  version: latest
+- author: mholt
+  caddyfile: ""
+  description: layer4 is a Caddy app that operates closest to layer 4 of the OSI model.
+  hash: "2021-05-25T22:35:46.90086Z"
+  name: caddy-l4
+  repository: github.com/mholt/caddy-l4
+  tags: []
+  version: latest
+- author: mholt
+  caddyfile: ""
+  description: |-
+    http.handlers.rate_limit implements rate limiting functionality.
+
+    If a rate limit is exceeded, an HTTP error with status 429 will be
+    returned. This error can be handled using the conventional error
+    handling routes in your config. An additional placeholder is made
+    available, called `{http.rate_limit.exceeded.name}`, which you can
+    use for logging or handling; it contains the name of the rate limit
+    zone which limit was exceeded.
+  hash: "2021-05-26T04:56:00.069639Z"
+  name: caddy-ratelimit
+  repository: github.com/mholt/caddy-ratelimit
+  tags: []
+  version: latest
+- author: mholt
+  caddyfile: ""
+  description: http.handlers.webdav implements an HTTP handler for responding to WebDAV clients.
+  hash: "2020-07-18T02:04:43.667911Z"
+  name: caddy-webdav
+  repository: github.com/mholt/caddy-webdav
+  tags: []
+  version: latest
+- author: mohammed90
+  caddyfile: ""
+  description: ssh is the app providing ssh services
+  hash: "2022-03-28T23:06:40.306807Z"
+  name: caddy-ssh
+  repository: github.com/mohammed90/caddy-ssh
+  tags: []
+  version: latest
+- author: muety
+  caddyfile: ""
+  description: ""
+  hash: "2021-10-05T07:34:53.817435Z"
+  name: caddy-pirsch-plugin
+  repository: github.com/muety/caddy-pirsch-plugin
+  tags: []
+  version: latest
+- author: muety
+  caddyfile: ""
+  description: |-
+    http.matchers.remote_host matches based on the remote IP of the
+    connection. A host name can be specified, whose A and AAAA
+    DNS records will be resolved to a corresponding IP for matching.
+
+    Note that IPs can sometimes be spoofed, so do not rely
+    on this as a replacement for actual authentication.
+  hash: "2021-10-02T14:11:25.994148Z"
+  name: caddy-remote-host
+  repository: github.com/muety/caddy-remote-host
+  tags: []
+  version: latest
+- author: porech
+  caddyfile: ""
+  description: ""
+  hash: "2020-10-11T16:00:44.493715Z"
+  name: caddy-maxmind-geolocation
+  repository: github.com/porech/caddy-maxmind-geolocation
+  tags: []
+  version: latest
+- author: pteich
+  caddyfile: ""
+  description: caddy.storage.consul holds all parameters for the Consul connection
+  hash: "2020-10-09T08:13:03.982308Z"
+  name: caddy-tlsconsul
+  repository: github.com/pteich/caddy-tlsconsul
+  tags: []
+  version: latest
+- author: shift72
+  caddyfile: ""
+  description: Allows looking up the Country Code of an IP address based on the Maxmind database
+  hash: "2022-02-28T22:58:17.335271Z"
+  name: caddy-geo-ip
+  repository: github.com/shift72/caddy-geo-ip
+  tags: []
+  version: latest
+- author: silinternational
+  caddyfile: ""
+  description: |-
+    caddy.storage.dynamodb implements certmagic.Storage to facilitate
+    storage of certificates in DynamoDB for a clustered environment.
+    Also implements certmagic.Locker to facilitate locking
+    and unlocking of cert data during storage
+  hash: "2020-09-22T13:49:25.765054Z"
+  name: certmagic-storage-dynamodb
+  repository: github.com/silinternational/certmagic-storage-dynamodb/v2
+  tags: []
+  version: latest
+- author: sjtug
+  caddyfile: ""
+  description: |-
+    http.handlers.filter implements an HTTP handler that writes the
+    visitor's IP address to a file or stream.
+  hash: "2021-03-14T21:31:41.197316Z"
+  name: caddy2-filter
+  repository: github.com/sjtug/caddy2-filter
+  tags: []
+  version: latest
+- author: techknowlogick
+  caddyfile: ""
+  description: ""
+  hash: "2020-07-22T23:09:35.836744Z"
+  name: caddy-s3browser
+  repository: github.com/techknowlogick/caddy-s3browser
+  tags: []
+  version: latest
+- author: techknowlogick
+  caddyfile: ""
+  description: ""
+  hash: "2022-02-07T19:13:27.724357Z"
+  name: certmagic-s3
+  repository: github.com/techknowlogick/certmagic-s3
+  tags: []
+  version: latest
+- author: ueffel
+  caddyfile: ""
+  description: ""
+  hash: "2021-12-05T19:40:36.830668Z"
+  name: caddy-basic-auth-filter
+  repository: github.com/ueffel/caddy-basic-auth-filter
+  tags: []
+  version: latest
+- author: ueffel
+  caddyfile: ""
+  description: http.encoders.br can create brotli encoders.
+  hash: "2021-06-08T15:39:31.114154Z"
+  name: caddy-brotli
+  repository: github.com/ueffel/caddy-brotli
+  tags: []
+  version: latest
+- author: ueffel
+  caddyfile: ""
+  description: ""
+  hash: "2021-06-08T15:42:43.751476Z"
+  name: caddy-imagefilter
+  repository: github.com/ueffel/caddy-imagefilter/defaults
+  tags: []
+  version: latest
+- author: ueffel
+  caddyfile: ""
+  description: |-
+    caddy.logging.encoders.filter.tls_cipher is Caddy log field filter that replaces the numeric TLS cipher_suite value with
+    the string representation.
+  hash: "2021-09-24T14:05:30.684122Z"
+  name: caddy-tls-format
+  repository: github.com/ueffel/caddy-tls-format
+  tags: []
+  version: latest
+- author: caddy
+  caddyfile: ""
+  description: |-
+    http.handlers.gopkg implements vanity go package import paths.
+
+    Vanity go package import paths give a cleaner appearance to go projects by separating the source code location from
+    the import path. It also gives flexibility to developers by allowing them to change a project's source code hosting
+    platform without requiring the project to be renamed. Finally, it allows projects hosted on various platforms to be
+    grouped under a common import path.
+  hash: "2021-02-15T23:34:52.704583Z"
+  name: gopkg
+  repository: magnax.ca/caddy/gopkg
+  tags: []
+  version: latest
+- author: femiwiki
+  caddyfile: ""
+  description: ':wrench: Caddy anonymous cache plugin for MediaWiki'
+  hash: 7b4d65af7d65d30cf88c4fcb09b4cd2088d71ad1
+  name: caddy-mwcache
+  repository: github.com/femiwiki/caddy-mwcache
+  tags:
+    - cache
+    - plugin
+    - caddy-plugin
+    - caddy-module
+    - mediawiki
+    - caddy
+    - caddy2
+  version: v0.0.4
+- author: darkweak
+  caddyfile: ""
+  description: A cache system built on top of different reverse-proxy to cache data easily and save precious ms compatible with @tyktechnologies, @traefik, @caddyserver, @go-chi, @bnkamalesh, @labstack, @gofiber, @go-goyave, @gin-gonic, @zalando, @nginx and @apache
+  hash: b62083b5f440e2c1e73908a43aec634fe6ae0b94
+  name: souin
+  repository: github.com/darkweak/souin/plugins/caddy
+  tags:
+    - http-cache
+    - traefik
+    - souin-instance
+    - traefik-plugin
+    - traefik-v2
+    - varnish
+    - caddy
+    - caddyserver
+    - caddy-plugin
+    - caddy-server
+    - caddy-module
+    - tyk
+    - tyk-gateway
+    - echo-framework
+    - labstack-echo
+    - gin-gonic
+    - gin-middleware
+    - skipper
+    - cache
+    - middleware
+  version: v1.6.6
+- author: caddy-dns
+  caddyfile: ""
+  description: 'Caddy module: dns.providers.loopia'
+  hash: ""
+  name: loopia
+  repository: github.com/caddy-dns/loopia
+  tags:
+    - caddy
+    - caddyserver
+    - caddy-module
+  version: latest
+- author: ueffel
+  caddyfile: ""
+  description: Caddy module to transform images from the file system in various ways.
+  hash: ""
+  name: caddy-imagefilter
+  repository: github.com/ueffel/caddy-imagefilter
+  tags:
+    - caddy
+    - caddyserver
+    - caddy-module
+  version: latest
+- author: Capevace
+  caddyfile: ""
+  description: My personal customized Caddy v2 template
+  hash: ""
+  name: custom-caddy-template
+  repository: github.com/Capevace/custom-caddy-template
+  tags:
+    - caddy
+    - ui
+    - user-interface
+    - login
+    - caddy-security
+    - caddy-auth-portal
+    - caddy-authentication
+    - caddy-module
+  version: latest
+- author: imgk
+  caddyfile: ""
+  description: ""
+  hash: ""
+  name: caddy-pprof
+  repository: github.com/imgk/caddy-pprof
+  tags:
+    - caddy-module
+    - pprof
+  version: latest
+- author: greenpau
+  caddyfile: ""
+  description: Authorization Plugin for Caddy v2 (JWT/PASETO)
+  hash: 07ab869315d9e0d9085a554d8d5f4fd5b4d705d8
+  name: caddy-authorize
+  repository: github.com/greenpau/caddy-authorize
+  tags:
+    - caddy
+    - caddy-plugin
+    - jwt
+    - jwt-authentication
+    - authorization
+    - caddyfile
+    - caddy2
+    - caddy-module
+    - rbac
+    - paseto
+  version: v1.3.24
+- author: greenpau
+  caddyfile: ""
+  description: Authentication Plugin for Caddy v2 implementing Form-Based, Basic, Local, LDAP, OpenID Connect, OAuth 2.0 (Github, Google, Facebook, Okta, etc.), SAML Authentication. MFA with App Authenticators and Yubico.
+  hash: 4f0d5954fc4c709e4e32c1f77377af0240cd0027
+  name: caddy-auth-portal
+  repository: github.com/greenpau/caddy-auth-portal
+  tags:
+    - caddy2
+    - caddy
+    - caddy-plugin
+    - caddy-module
+    - authentication
+    - authentication-middleware
+    - authentication-backend
+    - jwt
+    - jwt-tokens
+    - ldap-authentication
+    - ldap-authentication-backend
+    - ldap
+    - authentication-portal
+    - user-registration
+    - user-identity
+    - oauth2
+    - openid-connect
+    - saml
+    - github-authentication
+    - facebook-login
+  version: v1.4.39
+- author: vrongmeal
+  caddyfile: ""
+  description: Git module for Caddy v2
+  hash: ""
+  name: caddygit
+  repository: github.com/vrongmeal/caddygit
+  tags:
+    - caddy
+    - caddy-plugin
+    - caddy-module
+    - caddy-git
+  version: latest
+- author: n0trace
+  caddyfile: ""
+  description: Enable requests served by caddy for distributed tracing via The OpenTracing Project.
+  hash: ""
+  name: caddy-opentracing
+  repository: github.com/n0trace/caddy-opentracing
+  tags:
+    - caddy
+    - caddy-plugin
+    - caddy-module
+    - opentracing
+    - trace
+    - zipkin
+    - tracing
+    - distributed-tracing
+    - jaeger
+  version: latest
+- author: n0trace
+  caddyfile: ""
+  description: access ftp through caddy
+  hash: ""
+  name: caddy-ftp
+  repository: github.com/n0trace/caddy-ftp
+  tags:
+    - caddy
+    - proxy
+    - caddy-plugin
+    - caddyserver
+    - caddy-module
+    - reverse-proxy
+    - ftp
+    - ftp-proxy
+    - nginx
+    - nginx-proxy
+    - caddyftp
+  version: latest
