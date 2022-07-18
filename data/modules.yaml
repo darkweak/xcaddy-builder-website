@@ -1,3 +1,11 @@
+- author: Elegant996
+  caddyfile: ""
+  description: http.reverse_proxy.transport.scgi facilitates SCGI communication.
+  hash: "2022-05-01T07:17:46.849074Z"
+  name: scgi-transport
+  repository: github.com/Elegant996/scgi-transport
+  tags: []
+  version: latest
 - author: HeavenVolkoff
   caddyfile: ""
   description: http.handlers.authelia implements a plugin for securing routes with authentication
@@ -235,6 +243,14 @@
   version: latest
 - author: caddy-dns
   caddyfile: ""
+  description: dns.providers.netlify wraps the provider implementation as a Caddy module.
+  hash: "2022-05-30T09:36:23.686652Z"
+  name: netlify
+  repository: github.com/caddy-dns/netlify
+  tags: []
+  version: latest
+- author: caddy-dns
+  caddyfile: ""
   description: dns.providers.openstack-designate wraps the provider implementation as a Caddy module.
   hash: "2022-01-18T17:25:32.960365Z"
   name: openstack-designate
@@ -353,7 +369,7 @@
   version: latest
 - author: cubic3d
   caddyfile: ""
-  description: ""
+  description: http.handlers.ct allows to transpile YAML based configuration into a JSON ignition to be used with Flatcar or Fedora CoreOS.
   hash: "2021-08-22T18:14:21.464561Z"
   name: caddy-ct
   repository: github.com/cubic3d/caddy-ct
@@ -365,6 +381,14 @@
   hash: "2021-08-22T23:15:10.366517Z"
   name: caddy-quantity-limiter
   repository: github.com/cubic3d/caddy-quantity-limiter
+  tags: []
+  version: latest
+- author: darkweak
+  caddyfile: ""
+  description: http.handlers.cache declaration.
+  hash: "2022-05-14T05:14:48.90841Z"
+  name: souin
+  repository: github.com/darkweak/souin/plugins/caddy
   tags: []
   version: latest
 - author: dunglas
@@ -415,12 +439,30 @@
   repository: github.com/gamalan/caddy-tlsredis
   tags: []
   version: latest
+- author: gbox-proxy
+  caddyfile: ""
+  description: ""
+  hash: "2022-05-02T17:27:00.291718Z"
+  name: gbox
+  repository: github.com/gbox-proxy/gbox
+  tags: []
+  version: latest
 - author: ggicci
   caddyfile: ""
   description: http.authentication.providers.jwt facilitates JWT (JSON Web Token) authentication.
   hash: "2021-07-03T13:18:38.952564Z"
   name: caddy-jwt
   repository: github.com/ggicci/caddy-jwt
+  tags: []
+  version: latest
+- author: git001
+  caddyfile: ""
+  description: |-
+    Middleware implements an HTTP handler that writes the
+    uploaded file  to a file on the disk.
+  hash: "2022-05-15T21:34:27.201851Z"
+  name: caddyv2-upload
+  repository: github.com/git001/caddyv2-upload
   tags: []
   version: latest
 - author: greenpau
@@ -478,6 +520,14 @@
   hash: "2020-08-30T22:04:13.851115Z"
   name: caddy-openapi-validator
   repository: github.com/hslatman/caddy-openapi-validator
+  tags: []
+  version: latest
+- author: imgk
+  caddyfile: ""
+  description: admin.api.trojan is ...
+  hash: "2022-05-19T12:29:12.116619Z"
+  name: caddy-trojan
+  repository: github.com/imgk/caddy-trojan
   tags: []
   version: latest
 - author: kirsch33
@@ -572,6 +622,30 @@
   repository: github.com/mohammed90/caddy-ssh
   tags: []
   version: latest
+- author: mpilhlt
+  caddyfile: ""
+  description: |-
+    http.matchers.conneg matches requests by comparing results of a
+    content negotiation process to a (list of) values.
+
+    Lists of media types, languages, charsets, and encodings to match
+    the request against can be given - and at least one of them MUST
+    be specified.
+    OPTIONAL parameters are a strings for identifying URL query string
+    parameter keys that allow requests to override/skip the connection
+    negotiation process and force a media type, a language, a charset
+    or an encoding (all defaulting to '').
+    The values of query string parameter values corresponding to full
+    media types (languages, encodings, etc.) are hardcoded in a
+    variable called `aliases` below
+
+    COMPATIBILITY NOTE: This module is still experimental and is not
+    subject to Caddy's compatibility guarantee.
+  hash: "2022-05-13T07:19:48.509911Z"
+  name: caddy-conneg
+  repository: github.com/mpilhlt/caddy-conneg
+  tags: []
+  version: latest
 - author: muety
   caddyfile: ""
   description: ""
@@ -594,9 +668,25 @@
   repository: github.com/muety/caddy-remote-host
   tags: []
   version: latest
-- author: porech
+- author: neodyme-labs
   caddyfile: ""
   description: ""
+  hash: "2022-07-07T10:47:09.380965Z"
+  name: influx_log
+  repository: github.com/neodyme-labs/influx_log
+  tags: []
+  version: latest
+- author: neodyme-labs
+  caddyfile: ""
+  description: ""
+  hash: "2022-07-07T12:07:48.054376Z"
+  name: user_agent_parse
+  repository: github.com/neodyme-labs/user_agent_parse
+  tags: []
+  version: latest
+- author: porech
+  caddyfile: ""
+  description: Allows to filter requests based on source IP country.
   hash: "2020-10-11T16:00:44.493715Z"
   name: caddy-maxmind-geolocation
   repository: github.com/porech/caddy-maxmind-geolocation
@@ -604,7 +694,10 @@
   version: latest
 - author: pteich
   caddyfile: ""
-  description: caddy.storage.consul holds all parameters for the Consul connection
+  description: |-
+    caddy.storage.consul allows to store certificates and other TLS resources
+    in a shared cluster environment using Consul's key/value-store.
+    It uses distributed locks to ensure consistency.
   hash: "2020-10-09T08:13:03.982308Z"
   name: caddy-tlsconsul
   repository: github.com/pteich/caddy-tlsconsul
@@ -628,6 +721,14 @@
   hash: "2020-09-22T13:49:25.765054Z"
   name: certmagic-storage-dynamodb
   repository: github.com/silinternational/certmagic-storage-dynamodb/v2
+  tags: []
+  version: latest
+- author: sillygod
+  caddyfile: ""
+  description: admin.api.purge is a module that provides the /purge endpoint as the admin api.
+  hash: "2022-05-19T12:31:49.444871Z"
+  name: cdp-cache
+  repository: github.com/sillygod/cdp-cache
   tags: []
   version: latest
 - author: sjtug
@@ -654,6 +755,14 @@
   hash: "2022-02-07T19:13:27.724357Z"
   name: certmagic-s3
   repository: github.com/techknowlogick/certmagic-s3
+  tags: []
+  version: latest
+- author: tosie
+  caddyfile: ""
+  description: dns.providers.linode wraps the provider implementation as a Caddy module.
+  hash: "2022-05-19T12:27:07.195943Z"
+  name: caddy-dns-linode
+  repository: github.com/tosie/caddy-dns-linode
   tags: []
   version: latest
 - author: ueffel
@@ -704,6 +813,53 @@
   repository: magnax.ca/caddy/gopkg
   tags: []
   version: latest
+- author: n0trace
+  caddyfile: ""
+  description: Enable requests served by caddy for distributed tracing via The OpenTracing Project.
+  hash: ""
+  name: caddy-opentracing
+  repository: github.com/n0trace/caddy-opentracing
+  tags:
+    - caddy
+    - caddy-plugin
+    - caddy-module
+    - opentracing
+    - trace
+    - zipkin
+    - tracing
+    - distributed-tracing
+    - jaeger
+  version: latest
+- author: n0trace
+  caddyfile: ""
+  description: access ftp through caddy
+  hash: ""
+  name: caddy-ftp
+  repository: github.com/n0trace/caddy-ftp
+  tags:
+    - caddy
+    - proxy
+    - caddy-plugin
+    - caddyserver
+    - caddy-module
+    - reverse-proxy
+    - ftp
+    - ftp-proxy
+    - nginx
+    - nginx-proxy
+    - caddyftp
+  version: latest
+- author: ueffel
+  caddyfile: ""
+  description: Caddy module to transform images from the file system in various ways.
+  hash: 5a3ae6abb2272f6ae9ea93df437ff83fe40ddcad
+  name: caddy-imagefilter
+  repository: github.com/ueffel/caddy-imagefilter
+  tags:
+    - caddy
+    - caddyserver
+    - caddy-module
+  version: v1.2.0
 - author: femiwiki
   caddyfile: ""
   description: ':wrench: Caddy anonymous cache plugin for MediaWiki'
@@ -719,34 +875,6 @@
     - caddy
     - caddy2
   version: v0.0.4
-- author: darkweak
-  caddyfile: ""
-  description: A cache system built on top of different reverse-proxy to cache data easily and save precious ms compatible with @tyktechnologies, @traefik, @caddyserver, @go-chi, @bnkamalesh, @labstack, @gofiber, @go-goyave, @gin-gonic, @zalando, @nginx and @apache
-  hash: b62083b5f440e2c1e73908a43aec634fe6ae0b94
-  name: souin
-  repository: github.com/darkweak/souin/plugins/caddy
-  tags:
-    - http-cache
-    - traefik
-    - souin-instance
-    - traefik-plugin
-    - traefik-v2
-    - varnish
-    - caddy
-    - caddyserver
-    - caddy-plugin
-    - caddy-server
-    - caddy-module
-    - tyk
-    - tyk-gateway
-    - echo-framework
-    - labstack-echo
-    - gin-gonic
-    - gin-middleware
-    - skipper
-    - cache
-    - middleware
-  version: v1.6.6
 - author: caddy-dns
   caddyfile: ""
   description: 'Caddy module: dns.providers.loopia'
@@ -756,33 +884,6 @@
   tags:
     - caddy
     - caddyserver
-    - caddy-module
-  version: latest
-- author: ueffel
-  caddyfile: ""
-  description: Caddy module to transform images from the file system in various ways.
-  hash: ""
-  name: caddy-imagefilter
-  repository: github.com/ueffel/caddy-imagefilter
-  tags:
-    - caddy
-    - caddyserver
-    - caddy-module
-  version: latest
-- author: Capevace
-  caddyfile: ""
-  description: My personal customized Caddy v2 template
-  hash: ""
-  name: custom-caddy-template
-  repository: github.com/Capevace/custom-caddy-template
-  tags:
-    - caddy
-    - ui
-    - user-interface
-    - login
-    - caddy-security
-    - caddy-auth-portal
-    - caddy-authentication
     - caddy-module
   version: latest
 - author: imgk
@@ -852,40 +953,4 @@
     - caddy-plugin
     - caddy-module
     - caddy-git
-  version: latest
-- author: n0trace
-  caddyfile: ""
-  description: Enable requests served by caddy for distributed tracing via The OpenTracing Project.
-  hash: ""
-  name: caddy-opentracing
-  repository: github.com/n0trace/caddy-opentracing
-  tags:
-    - caddy
-    - caddy-plugin
-    - caddy-module
-    - opentracing
-    - trace
-    - zipkin
-    - tracing
-    - distributed-tracing
-    - jaeger
-  version: latest
-- author: n0trace
-  caddyfile: ""
-  description: access ftp through caddy
-  hash: ""
-  name: caddy-ftp
-  repository: github.com/n0trace/caddy-ftp
-  tags:
-    - caddy
-    - proxy
-    - caddy-plugin
-    - caddyserver
-    - caddy-module
-    - reverse-proxy
-    - ftp
-    - ftp-proxy
-    - nginx
-    - nginx-proxy
-    - caddyftp
   version: latest
