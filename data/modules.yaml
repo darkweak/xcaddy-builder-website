@@ -24,7 +24,13 @@
   version: latest
 - author: RussellLuo
   caddyfile: ""
-  description: http.handlers.rate_limit implements a handler for rate-limiting.
+  description: |-
+    http.handlers.rate_limit implements a handler for rate-limiting.
+
+    If a client exceeds the rate limit, an HTTP error with status `<reject_status>` will
+    be returned. This error can be handled using the conventional error handlers.
+    See [handle_errors](https://caddyserver.com/docs/caddyfile/directives/handle_errors)
+    for how to set up error handlers.
   hash: "2021-01-29T01:42:13.78122Z"
   name: ratelimit
   repository: github.com/RussellLuo/caddy-ext/ratelimit
@@ -361,7 +367,7 @@
   version: latest
 - author: circa10a
   caddyfile: ""
-  description: http.handlers.geofence implements IP geofencing functionality. https://github.com/circa10a/caddy-geofence
+  description: http.handlers.geofence implements IP geofencing functionality.
   hash: "2021-11-16T01:30:43.335033Z"
   name: caddy-geofence
   repository: github.com/circa10a/caddy-geofence
@@ -385,7 +391,11 @@
   version: latest
 - author: darkweak
   caddyfile: ""
-  description: http.handlers.cache declaration.
+  description: |-
+    http.handlers.cache development repository of the cache handler, allows
+    the user to set up an HTTP cache system, RFC-7234 compliant and
+    supports the tag based cache purge, distributed and not-distributed
+    storage, key generation tweaking.
   hash: "2022-05-14T05:14:48.90841Z"
   name: souin
   repository: github.com/darkweak/souin/plugins/caddy
@@ -393,7 +403,7 @@
   version: latest
 - author: dunglas
   caddyfile: ""
-  description: http.handlers.mercure implements a Mercure hub as a Caddy module. Mercure is a protocol allowing to push data updates to web browsers and other HTTP clients in a convenient, fast, reliable and battery-efficient way.
+  description: ""
   hash: "2021-01-19T13:05:04.354652Z"
   name: mercure
   repository: github.com/dunglas/mercure/caddy
