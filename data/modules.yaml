@@ -367,7 +367,7 @@
   version: latest
 - author: circa10a
   caddyfile: ""
-  description: http.handlers.geofence implements IP geofencing functionality.
+  description: http.handlers.geofence
   hash: "2021-11-16T01:30:43.335033Z"
   name: caddy-geofence
   repository: github.com/circa10a/caddy-geofence
@@ -375,7 +375,7 @@
   version: latest
 - author: cubic3d
   caddyfile: ""
-  description: http.handlers.ct allows to transpile YAML based configuration into a JSON ignition to be used with Flatcar or Fedora CoreOS.
+  description: ""
   hash: "2021-08-22T18:14:21.464561Z"
   name: caddy-ct
   repository: github.com/cubic3d/caddy-ct
@@ -451,7 +451,7 @@
   version: latest
 - author: gbox-proxy
   caddyfile: ""
-  description: ""
+  description: http.handlers.gbox implements an HTTP handler as a GraphQL reverse proxy server for caching, securing, and monitoring.
   hash: "2022-05-02T17:27:00.291718Z"
   name: gbox
   repository: github.com/gbox-proxy/gbox
@@ -696,7 +696,7 @@
   version: latest
 - author: porech
   caddyfile: ""
-  description: Allows to filter requests based on source IP country.
+  description: ""
   hash: "2020-10-11T16:00:44.493715Z"
   name: caddy-maxmind-geolocation
   repository: github.com/porech/caddy-maxmind-geolocation
@@ -715,7 +715,7 @@
   version: latest
 - author: shift72
   caddyfile: ""
-  description: Allows looking up the Country Code of an IP address based on the Maxmind database
+  description: Allows to filter requests based on source IP country.
   hash: "2022-02-28T22:58:17.335271Z"
   name: caddy-geo-ip
   repository: github.com/shift72/caddy-geo-ip
@@ -811,13 +811,7 @@
   version: latest
 - author: caddy
   caddyfile: ""
-  description: |-
-    http.handlers.gopkg implements vanity go package import paths.
-
-    Vanity go package import paths give a cleaner appearance to go projects by separating the source code location from
-    the import path. It also gives flexibility to developers by allowing them to change a project's source code hosting
-    platform without requiring the project to be renamed. Finally, it allows projects hosted on various platforms to be
-    grouped under a common import path.
+  description: http.handlers.gopkg represents the GoPkg Caddy module.
   hash: "2021-02-15T23:34:52.704583Z"
   name: gopkg
   repository: magnax.ca/caddy/gopkg
