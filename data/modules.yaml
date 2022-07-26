@@ -361,10 +361,18 @@
   version: latest
 - author: circa10a
   caddyfile: ""
-  description: http.handlers.geofence implements IP geofencing functionality.
+  description: http.handlers.geofence implements IP geofencing functionality. https://github.com/circa10a/caddy-geofence
   hash: "2021-11-16T01:30:43.335033Z"
   name: caddy-geofence
   repository: github.com/circa10a/caddy-geofence
+  tags: []
+  version: latest
+- author: corazawaf
+  caddyfile: ""
+  description: ""
+  hash: "2022-07-25T22:49:49.038683Z"
+  name: coraza-caddy
+  repository: github.com/corazawaf/coraza-caddy
   tags: []
   version: latest
 - author: cubic3d
@@ -386,8 +394,10 @@
 - author: darkweak
   caddyfile: ""
   description: |-
-    http.handlers.cache allows the user to set up an HTTP cache system, RFC-7234 compliant.
-    Supports the tag based cache purge, distributed and not-distributed storage.
+    http.handlers.cache development repository of the cache handler, allows
+    the user to set up an HTTP cache system, RFC-7234 compliant and
+    supports the tag based cache purge, distributed and not-distributed
+    storage, key generation tweaking.
   hash: "2022-05-14T05:14:48.90841Z"
   name: souin
   repository: github.com/darkweak/souin/plugins/caddy
@@ -395,7 +405,7 @@
   version: latest
 - author: dunglas
   caddyfile: ""
-  description: ""
+  description: http.handlers.mercure implements a Mercure hub as a Caddy module. Mercure is a protocol allowing to push data updates to web browsers and other HTTP clients in a convenient, fast, reliable and battery-efficient way.
   hash: "2021-01-19T13:05:04.354652Z"
   name: mercure
   repository: github.com/dunglas/mercure/caddy
@@ -443,7 +453,7 @@
   version: latest
 - author: gbox-proxy
   caddyfile: ""
-  description: http.handlers.gbox implements an HTTP handler as a GraphQL reverse proxy server for caching, securing, and monitoring.
+  description: ""
   hash: "2022-05-02T17:27:00.291718Z"
   name: gbox
   repository: github.com/gbox-proxy/gbox
@@ -777,9 +787,7 @@
   version: latest
 - author: ueffel
   caddyfile: ""
-  description: |-
-    caddy.logging.encoders.filter.basic_auth_user is a Caddy log field filter that replaces the a base64 encoded authorization
-    header with just the user name.
+  description: ""
   hash: "2021-12-05T19:40:36.830668Z"
   name: caddy-basic-auth-filter
   repository: github.com/ueffel/caddy-basic-auth-filter
